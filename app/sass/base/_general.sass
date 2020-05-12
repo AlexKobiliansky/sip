@@ -63,5 +63,29 @@ ul
 .hidden
   display: none!important
 // ======= END TEMPLATE STYLES =======
+.btn
+  display: inline-block
+  line-height: 1
+  text-align: center
+  white-space: nowrap
+  cursor: pointer
+  border-width: 1px
+  border-style: solid
+  +mt(.3s)
+  box-shadow: none
+  padding: 12px 32px
+  border-radius: 3px
+
+.btn-transparent
+  border-color: $accent-green
+  color: $accent-green
+  &:focus, &:active
+    background-color: transparent
+    color: $accent-green
+  &:hover
+    background-color: $accent-green
+    color: #fff
+
+
 
 

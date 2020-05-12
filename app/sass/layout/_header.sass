@@ -1,0 +1,124 @@
+.main-head
+  background-color: #fff
+
+.top-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  line-height: 1
+  padding: 25px 0 30px
+  .logo
+    display: inline-block
+    width: 195px
+    .name
+      font-size: 46px
+      font-weight: 700
+      color: $accent-green
+      margin-bottom: 6px
+      font-family: "Oswald", sans-serif
+      display: inline-block
+      letter-spacing: 0.02em
+    .description
+      font-size: 14px
+      line-height: 18px
+      color: $text
+      letter-spacing: 0.01em
+      font-weight: 100
+.topline
+  &-info
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 15px
+    border-bottom: 1px solid #dadada
+    font-size: 18px
+  &-mail
+    font-weight: 300
+    color: $accent-red
+  &-contacts
+    .btn
+      padding-left: 35px
+      padding-right: 35px
+  &-phone
+    display: block
+    font-size: 23px
+    font-weight: 500
+    color: $text
+    margin-bottom: 11px
+    &:hover
+      color: $accent-red
+
+
+.main-mnu
+  padding-top: 15px
+  font-size: 0
+  li
+    display: inline-block
+    margin-right: 50px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: $accent-red
+      right: -28px
+      top: calc(50% - 3px)
+    &:last-child
+      margin-right: 0
+      &:after
+        display: none
+  a
+    display: inline-block
+    font-size: 18px
+    font-weight: 300
+    color: $text
+    &:hover
+      color: $accent-green
+
+.hamburger-wrap
+  display: none
+
+
+//mobile menu customization
+.mm-menu_theme-dark
+  background-color: $accent-green
+
+.mm-listitem:after
+  border-color: rgba(#fff, .85)
+
+.mm-listitem .mm-btn_next
+  border-color: rgba(#fff, .85)
+
+.mm-navbars_top
+  border-color: rgba(#fff, .85)
+
+.mm-navbar
+  border-color: rgba(#fff, .85)
+  align-items: center
+  img
+    margin-left: auto
+    margin-right: auto
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+    font-size: 14px
+    text-transform: uppercase
+    letter-spacing: 0.03em
+//end mobile menu customization
+
+.mmenu-logo
+  .name
+    font-family: "Oswald", sans-serif
+    font-weight: 700
+    color: #fff
+    font-size: 38px
+    margin-bottom: 14px
+  .description
+    color: #eee
+    font-size: 14px
+    line-height: 1
+
