@@ -6,6 +6,20 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .adv-item
+    &:nth-child(1)
+      left: 0
+    &:nth-child(2)
+      left: 170px
+    &:nth-child(3)
+      left: 225px
+    &:nth-child(4)
+      left: 355px
+    &:nth-child(5)
+      left: 553px
+    &:nth-child(6)
+      left: 610px
+
   .project-form
     padding-right: 280px
     .form-labels-wrap
@@ -62,6 +76,37 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-advantages
+    height: 700px
+
+  .adv-item
+    width: 280px
+    &-btn
+      width: 40px
+      height: 40px
+      top: -20px
+      left: calc(50% - 20px)
+    &-content
+      font-size: 16px
+      background: radial-gradient(circle at center 0, transparent, transparent 22px, #fff 22px)
+
+    &:nth-child(1)
+      left: -15px
+    &:nth-child(2)
+      left: 85px
+    &:nth-child(3)
+      left: 128px
+      top: 563px
+    &:nth-child(4)
+      left: 270px
+      top: 355px
+    &:nth-child(5)
+      left: 415px
+      top: 230px
+    &:nth-child(6)
+      left: 430px
+      top: 510px
 
   .project-form
     padding-right: 200px
@@ -169,6 +214,34 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-advantages
+    height: 500px
+
+  .adv-item
+    width: 170px
+    &-content
+      font-size: 12px
+      padding-left: 15px
+      padding-right: 15px
+    &:nth-child(odd)
+      left: -15px
+    &:nth-child(even)
+      left: auto
+      right: -15px
+    &:nth-child(1)
+      top: 50px
+    &:nth-child(2)
+      top: 120px
+    &:nth-child(3)
+      top: 190px
+    &:nth-child(4)
+      top: 260px
+    &:nth-child(5)
+      top: 330px
+    &:nth-child(6)
+      top: 400px
+
 
   .project-form
     padding-left: 60px

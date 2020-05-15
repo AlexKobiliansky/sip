@@ -94,6 +94,20 @@ $(document).ready(function(){
     });
 
 
+    $('.adv-item:first-child').addClass('active').find('.adv-item-content').show();
+
+    $('.adv-item-btn').click(function(){
+        var th = $(this);
+        var parent = th.parents('.adv-item');
+        var content = th.siblings('.adv-item-content');
+
+        parent.toggleClass('active');
+        content.slideToggle();
+
+        parent.siblings('.adv-item').removeClass('active').find('.adv-item-content').slideUp();
+    })
+
+
     /** FORMS START*/
     var uPhone = $('.user-phone');
     uPhone.mask("+7 (999) 999-99-99",{autoclear: false});

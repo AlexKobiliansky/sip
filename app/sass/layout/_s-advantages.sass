@@ -1,0 +1,65 @@
+.s-advantages
+  height: 800px
+  background-image: url('../img/bg-advantages.jpg')
+  +bg-cover
+
+.advantages-wrap
+  position: relative
+.adv-item
+  width: 334px
+  position: absolute
+  &-btn
+    display: flex
+    width: 44px
+    height: 44px
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    border: 2px solid #fff
+    border-radius: 50%
+    background-color: $accent-green
+    +mt(.3s)
+    position: absolute
+    left: calc(50% - 22px)
+    top: -22px
+    z-index: 2
+    font-size: 0
+    &:hover
+      background-color: darken($accent-green, 10%)
+  &-content
+    background-color: #fff
+    border-radius: 7px
+    font-size: 20px
+    font-weight: 500
+    padding: 35px 30px 25px
+    text-align: center
+    background: radial-gradient(circle at center 0, transparent, transparent 24px, #fff 24px)
+    overflow: hidden
+    line-height: 1.2
+    display: none
+
+  &:nth-child(1)
+    top: 404px
+    left: 45px
+  &:nth-child(2)
+    top: 152px
+    left: 272px
+  &:nth-child(3)
+    top: 663px
+    left: 314px
+  &:nth-child(4)
+    top: 455px
+    left: 430px
+  &:nth-child(5)
+    top: 260px
+    left: 668px
+  &:nth-child(6)
+    top: 590px
+    left: 731px
+  &.active
+    .adv-item-btn
+      background-color: $accent-red
+      transform: rotate(225deg)
+      &:hover
+        background-color: darken($accent-red, 10%)
+
