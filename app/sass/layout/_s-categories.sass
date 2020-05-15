@@ -1,0 +1,69 @@
+.s-categories
+  background-color: #eef7ff
+  position: relative
+  z-index: 2
+
+.index-categories
+  .categories-wrap
+    position: relative
+    top: -40px
+  .clouds
+    position: absolute
+    &.top
+      top: -90px
+      left: 0
+    &.bottom
+      bottom: 0
+      left: 0
+
+.category-item
+  background-color: #fff
+  display: block
+  border: 2px solid #fff
+  border-radius: 5px
+  margin-bottom: 30px
+  position: relative
+  box-shadow: 0 0 20px 3px rgba(#000, .1)
+  &-img
+    position: absolute
+    right: 0
+    bottom: 0
+  &-content
+    position: relative
+    z-index: 2
+  &-title
+    display: block
+    font-family: "Oswald", sans-serif
+    font-weight: 500
+    position: relative
+    z-index: 2
+    color: $text
+    margin-bottom: 5px
+  &-link
+    position: relative
+    font-weight: 200
+    color: $text
+    .svg
+      fill: $accent-red
+      width: 13px
+      height: auto
+      transform: rotate(180deg)
+      position: relative
+      top: 3px
+      margin-left: 8px
+  &.large-item
+    padding: 45px 35px
+    height: 220px
+    .category-item-title
+      font-size: 24px
+    .category-item-link
+      font-size: 14px
+  &.small-item
+    padding: 30px 35px
+    height: 185px
+    .category-item-title
+      font-size: 20px
+    .category-item-link
+      font-size: 12px
+  &:hover
+    border-color: $accent-green

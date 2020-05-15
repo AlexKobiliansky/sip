@@ -1,0 +1,57 @@
+.s-form
+  &.s-index-form-top
+    padding: 110px 0
+
+
+
+form
+  .form-labels-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .btn
+    width: 160px
+  label
+    width: calc(50% - 100px)
+    margin-bottom: 0
+  input
+    width: 100%
+    line-height: 1
+    font-weight: 300
+    padding: 11px 25px 10px
+    border: 1px solid #dddddd
+    border-radius: 3px
+    color: $text
+    &::placeholder
+      color: #ddd
+    &:focus
+      border-color: $accent-green
+      &::placeholder
+        color: $text
+    &.error
+      color: red!important
+      border-color: red!important
+      &::placeholder
+        color: red!important
+  .help-block
+    display: none
+
+
+
+
+.section-form
+  background-color: #fff
+  width: 800px
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+  padding: 55px 20px 65px
+  border-radius: 10px
+  border: 2px dashed $accent-green
+  box-shadow: 0 0 0 20px rgba(#fff, .6), 0 0 20px 20px rgba(#000, .2)
+  .form-desc
+    font-size: 18px
+    font-weight: 300
+    margin-bottom: 25px
+  .form-labels-wrap
+    padding: 0 65px

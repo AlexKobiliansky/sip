@@ -6,6 +6,20 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .clouds
+    max-width: 100%
+
+  .category-item
+    &.large-item, .small-item
+      padding: 30px 35px
+      height: 190px
+      .category-item-title
+        font-size: 20px
+      .category-item-link
+        font-size: 12px
+      .category-item-img
+        max-width: 180px
+
   .s-intro
     padding-top: 360px
 
@@ -32,8 +46,52 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  form
+    input
+      padding-left: 15px
+      padding-right: 15px
+
+  .section-form
+    width: 100%
+    .form-labels-wrap
+      padding: 0 20px
+
+  .section-title
+    font-size: 28px
+
+  .index-categories
+    .clouds-top-wrap
+      position: absolute
+      overflow: hidden
+      top: -90px
+    .clouds
+      max-width: none
+      &.top
+        top: 0
+        position: relative
+
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .section-form
+    .form-labels-wrap
+      padding: 0 80px
+      flex-direction: column
+    label
+      width: 100%
+      margin-bottom: 20px
+    .btn
+      width: 100%
+    .form-desc
+      font-size: 16px
+    .section-title
+      margin-bottom: 20px
+
+  .category-item
+    &.large-item, .small-item
+      padding: 20px 25px
+      .category-item-img
+        max-width: 160px
 
   .intro-content
     width: 400px
@@ -77,6 +135,14 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .section-title
+    font-size: 24px
+
+  .section-form
+    padding: 30px 20px
+    .form-labels-wrap
+      padding: 0 20px
 
   .intro-slider
     .owl-dots
@@ -123,6 +189,14 @@
       margin-top: 15px
 
 @media (max-width: 390px)
+
+  .section-form
+    .section-title
+      font-size: 20px
+    .form-desc
+      font-size: 14px
+    .form-labels-wrap
+      padding: 0
 
   .intro-content
     padding-right: 0
