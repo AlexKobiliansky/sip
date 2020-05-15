@@ -44,6 +44,21 @@ $(document).ready(function(){
     /**
      * end mobile-mnu customization
      */
+
+
+
+    $('.intro-slider').owlCarousel({
+        loop:true,
+        nav: false,
+        items: 1,
+        margin: 15,
+        dots: true,
+        animateOut: 'fadeOut',
+        // animateIn: 'fadeIn',
+        mouseDrag: false,
+        touchDrag: false,
+        // autoplay: true,
+    });
     
     
     //E-mail Ajax Send
