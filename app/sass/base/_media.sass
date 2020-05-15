@@ -6,6 +6,23 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .project-form
+    padding-right: 280px
+    .form-labels-wrap
+      flex-wrap: wrap
+      justify-content: flex-start
+    label
+      margin-left: 30px
+      margin-bottom: 30px
+      width: 200px
+      &.file-upload
+        margin-bottom: 0
+    .jq-file
+      margin-left: 0
+    .btn
+      margin-left: 30px
+
+
   .clouds
     max-width: 100%
 
@@ -46,6 +63,10 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .project-form
+    padding-right: 200px
+    .form-labels-wrap
+
   form
     input
       padding-left: 15px
@@ -72,6 +93,19 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .project-form
+    padding-right: 60px
+    .form-desc
+      font-size: 16px
+    label
+      width: 300px
+      margin-left: 0
+      margin-bottom: 20px
+      &.file-upload
+        margin-bottom: 20px
+    .btn
+      margin-left: 0
 
   .section-form
     .form-labels-wrap
@@ -136,6 +170,19 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .project-form
+    padding-left: 60px
+    text-align: center
+    .section-title
+      text-align: center
+    .btn
+      margin-left: auto
+      margin-right: auto
+
+  .project-item
+    &-img
+      height: 220px
+
   .section-title
     font-size: 24px
 
@@ -189,6 +236,26 @@
       margin-top: 15px
 
 @media (max-width: 390px)
+
+  .project-form
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 30px
+    padding-bottom: 30px
+    .form-desc
+      font-size: 14px
+      margin-bottom: 15px
+
+  .project-item
+    &-img
+      height: 200px
+    &-content
+      padding-left: 15px
+      padding-right: 15px
+    &-desc
+      font-size: 14px
+    &-title
+      font-size: 18px
 
   .section-form
     .section-title

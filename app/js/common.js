@@ -109,6 +109,11 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
+    $('input[type="file"]').styler({
+        fileBrowse: "Загрузить проект",
+        filePlaceholder: "Загрузить проект",
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);

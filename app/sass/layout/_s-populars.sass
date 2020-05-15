@@ -1,0 +1,144 @@
+.s-populars
+  padding: 80px 0 190px
+  background-color: #eef7ff
+  .section-title
+    text-align: center
+    margin-bottom: 40px
+
+.project-item
+  display: block
+  border-radius: 5px
+  overflow: hidden
+  box-shadow: 0 0 20px rgba(#000, .15)
+  margin-bottom: 30px
+  &-img
+    height: 160px
+    position: relative
+    display: block
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: rgba($accent-green, .2)
+      +mt(.3s)
+      opacity: 0
+  &-content
+    display: block
+    background-color: #fff
+    padding: 18px 25px 22px
+    border: 1px solid transparent
+    border-top: none
+    +mt(.3s)
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+  &-title
+    font-size: 20px
+    display: block
+    font-weight: 500
+    margin-bottom: 12px
+    color: $text
+  &-squares
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 12px
+    .svg
+      fill: #999999
+      margin-right: 8px
+    &>span
+      width: 50%
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      color: $text
+    .left
+      .svg
+        height: 18px
+        width: auto
+    .right
+      .svg
+        height: 24px
+        width: auto
+  &-desc
+    color: #767676
+    display: block
+    line-height: 1.2
+    margin-bottom: 12px
+  &-price
+    display: block
+    font-size: 18px
+    font-weight: 700
+    color: $accent-green
+  &:hover
+    .project-item-content
+      border-color: $accent-green
+    .project-item-img
+      &:before
+        opacity: 1
+
+
+.project-form
+  border-radius: 5px
+  box-shadow: 0 0 20px rgba(#000, .1)
+  background-color: #fff
+  background-image: url('../img/bg-project-form.png')
+  +bg-cover
+  padding: 45px 240px 60px 40px
+  .section-title
+    text-align: left
+    margin-bottom: 10px
+  .form-desc
+    font-size: 18px
+    font-weight: 300
+    margin-bottom: 30px
+  .btn
+    width: 160px
+    margin-left: 28px
+  .file-upload
+    font-size: 0
+  label
+    margin-left: 15px
+    &:first-child, &.file-upload
+      margin-left: 0
+  .jq-file
+    width: 200px
+    font-size: 0
+    cursor: pointer
+    margin-left: 23px
+    &__browse
+      display: none!important
+    &__name
+      padding-left: 30px
+      padding-right: 0
+      font-size: 18px
+      font-family: "Montserrat", sans-serif
+      text-decoration: underline
+      font-weight: normal
+      line-height: 1
+      height: auto
+      padding-top: 11px
+      padding-bottom: 11px
+      border: none
+      box-shadow: none
+      background: transparent
+      cursor: pointer!important
+      position: relative
+      z-index: 2
+      &:before
+        content: ''
+        position: absolute
+        height: 22px
+        width: 22px
+        background-image: url('../img/icons/upload-icon.svg')
+        +bg-cover
+        left: 0
+        top: calc(50% - 11px)
+      &:hover
+        text-decoration: none
