@@ -107,6 +107,19 @@ $(document).ready(function(){
         parent.siblings('.adv-item').removeClass('active').find('.adv-item-content').slideUp();
     })
 
+    function heightses() {
+        if ($(window).width()>480) {
+            $('.project-item-title').matchHeight({byRow: true});
+            $('.project-item-desc').matchHeight({byRow: true});
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
 
     /** FORMS START*/
     var uPhone = $('.user-phone');
