@@ -1,0 +1,47 @@
+.s-video
+  padding-top: 110px
+  background-image: url('../img/bg-video.jpg')
+  +bg-cover
+  .section-title
+    text-align: center
+    margin-bottom: 50px
+
+.thumbnail-container
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($text, .2)
+
+.video-item
+  height: 510px
+  width: 100%
+  background-color: #374a52
+  +bg-cover
+  border-radius: 5px
+  overflow: hidden
+
+.video-player
+  position: relative
+
+.you-player
+  position: relative
+  z-index: 3
+
+.btn-play
+  position: absolute
+  top: calc(50% - 32px)
+  left: calc(50% - 32px)
+  cursor: pointer
+  .svg
+    width: 64px
+    height: auto
+    fill: $accent-red
+    +mt(.3s)
+  &:hover
+    .svg
+      fill: darken($accent-red, 10%)

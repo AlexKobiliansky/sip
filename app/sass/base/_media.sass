@@ -162,6 +162,9 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .video-item
+    height: 380px
+
   .project-form
     padding-right: 60px
     .form-desc
@@ -238,6 +241,34 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .owl-carousel
+    .owl-nav
+      button.owl-prev
+        left: -15px
+      button.owl-next
+        right: -15px
+
+  .s-stocks
+    padding-top: 40px
+
+  .stock-item
+    &-title
+      font-size: 22px
+      &:after
+        height: 22px
+        width: 22px
+    &-desc
+      font-size: 16px
+
+  .btn-play
+    top: calc(50% - 25px)
+    left: calc(50% - 25px)
+    .svg
+      width: 50px
+
+  .video-item
+    height: 320px
 
   .about-content
     font-size: 14px
@@ -368,6 +399,9 @@
 
 @media (max-width: 390px)
 
+
+  .video-item
+    height: 280px
 
 
   .categories-wrap

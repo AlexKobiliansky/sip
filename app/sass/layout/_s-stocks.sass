@@ -1,0 +1,65 @@
+.s-stocks
+  padding-top: 80px
+  padding-bottom: 45px
+  background-color: #eef7ff
+  position: relative
+  box-shadow: 0 -20px 20px 0 #eef7ff
+  .container
+    position: relative
+    z-index: 2
+  .section-title
+    text-align: center
+    margin-bottom: 45px
+
+
+.cloud-stocks-top
+  left: 0
+  top: -100px
+
+.stock-item
+  background-color: #fff
+  box-shadow: 0 0 20px rgba(#000, .1)
+  border-radius: 5px
+  overflow: hidden
+  padding: 30px 35px
+  position: relative
+  min-height: 215px
+  &-title
+    font-family: "Oswald", sans-serif
+    font-size: 28px
+    font-weight: 600
+    margin-bottom: 12px
+    display: inline-block
+    position: relative
+    line-height: 1
+    z-index: 2
+    &:after
+      content: ''
+      position: relative
+      display: inline-block
+      height: 28px
+      width: 28px
+      background-image: url('../img/icons/fire-icon.svg')
+      +bg-cover
+      margin-left: 5px
+      margin-bottom: 2px
+  &-desc
+    position: relative
+    z-index: 2
+    font-size: 18px
+    line-height: 1.2
+    span
+      font-weight: 600
+      color: $accent-green
+  &-img
+    width: 180px!important
+    position: absolute
+    right: 8px
+    bottom: 11px
+
+.stocks-slider
+  .owl-dots
+    text-align: center
+    margin-top: 45px
+    button.owl-dot
+      margin: 0 4px

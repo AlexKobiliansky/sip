@@ -116,6 +116,33 @@ ul
         background-color: $accent-red
         //left: -2px
         top: 2px
+  .owl-nav
+    position: absolute
+    width: 100%
+    left: 0
+    top: calc(50% - 55px)
+    button.owl-prev, button.owl-next
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background-image: url('../img/icons/slider-arrow.svg')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 20px 20px
+      border: 5px solid #eef7ff
+      background-color: $accent-green
+      position: absolute
+      top: 0
+      +mt(.3s)
+      &:hover
+        background-color: darken($accent-green, 10%)
+    button.owl-prev
+      left: -25px
+      transform: rotate(180deg)
+    button.owl-next
+      right: -25px
+
+
 
 .section-title
   font-family: "Oswald", sans-serif
@@ -130,6 +157,8 @@ ul
   position: absolute
   overflow: hidden
   width: 100%
+
+
 
 
 
