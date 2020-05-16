@@ -6,6 +6,11 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .about-content
+    width: 550px
+  .about-img
+    width: 650px
+
   .adv-item
     &:nth-child(1)
       left: 0
@@ -77,6 +82,20 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-about
+    padding-top: 100px
+
+  .about-content
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+
+  .about-img
+    position: relative
+    width: 100%
+    top: -100px
+    margin-bottom: -100px
+
   .s-advantages
     height: 700px
 
@@ -125,6 +144,10 @@
   .section-title
     font-size: 28px
 
+  .category-item
+    &.large-item, &.small-item
+      height: 190px
+
   .index-categories
     .clouds-top-wrap
       position: absolute
@@ -167,6 +190,7 @@
       margin-bottom: 20px
 
   .category-item
+    border: none
     &.large-item, .small-item
       padding: 20px 25px
       .category-item-img
@@ -214,6 +238,22 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .about-content
+    font-size: 14px
+    width: calc(100% - 60px)
+    padding: 30px 20px
+
+  .s-about
+    padding-top: 50px
+
+  .section-desc
+    font-size: 16px
+
+  .s-populars
+    padding: 50px 0 30px
+    .project-form
+      margin-bottom: 70px
 
   .s-advantages
     height: 500px
@@ -264,13 +304,31 @@
     .form-labels-wrap
       padding: 0 20px
 
+  .categories-wrap
+    .col-6
+      &:nth-child(odd)
+        padding-right: 7.5px
+      &:nth-child(even)
+        padding-left: 7.5px
+
+    .category-item
+      margin-bottom: 15px
+      padding-left: 15px
+      padding-right: 15px
+      &.large-item, &.small-item
+        .category-item-title
+          font-size: 17px
+        .category-item-img
+          max-width: 80%
+
+
   .intro-slider
     .owl-dots
       margin-top: 25px
 
   .s-intro
     padding-top: 280px
-    padding-bottom: 70px
+    padding-bottom: 90px
 
   .intro-content
     width: 100%
@@ -309,6 +367,20 @@
       margin-top: 15px
 
 @media (max-width: 390px)
+
+
+
+  .categories-wrap
+    .col-6
+      width: 100%!important
+      max-width: none
+      flex-basis: 100%
+      padding-left: 15px!important
+      padding-right: 15px!important
+    .category-item
+      &.large-item, &.small-item
+        .category-item-title
+          font-size: 20px
 
   .project-form
     padding-left: 20px

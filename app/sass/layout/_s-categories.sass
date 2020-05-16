@@ -4,26 +4,30 @@
   z-index: 2
 
 .index-categories
+  box-shadow: 0 20px 20px 0 #eef7ff
   .categories-wrap
     position: relative
     top: -40px
-  .clouds
+  .clouds-wrap
     position: absolute
-    &.top
+    overflow: hidden
+    width: 100%
+    &-top
       top: -90px
       left: 0
-    &.bottom
-      bottom: 0
+    &-bottom
+      bottom: -70px
       left: 0
 
 .category-item
   background-color: #fff
   display: block
-  border: 2px solid #fff
+  border: 2px solid transparent
   border-radius: 5px
   margin-bottom: 30px
   position: relative
   box-shadow: 0 0 20px 3px rgba(#000, .1)
+  overflow: hidden
   &-img
     position: absolute
     right: 0
@@ -67,3 +71,23 @@
       font-size: 12px
   &:hover
     border-color: $accent-green
+  &.new
+    overflow: hidden
+    &:after
+      content: 'NEW'
+      font-family: "Roboto", sans-serif
+      font-weight: 700
+      background-color: $accent-red
+      text-align: center
+      color: #fff
+      letter-spacing: 0.04em
+      font-size: 18px
+      width: 200px
+      display: block
+      padding: 30px 0 10px
+      z-index: 2
+      position: absolute
+      transform: rotate(35deg)
+      right: -80px
+      top: -16px
+      line-height: 1
