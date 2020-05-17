@@ -97,6 +97,9 @@ ul
     color: #fff
     background-color: darken($accent-green, 10%)
     border-color: darken($accent-green, 10%)
+  &.disabled
+    filter: grayscale(.7)
+    pointer-events: none
 
 
 .owl-carousel
@@ -157,6 +160,139 @@ ul
   position: absolute
   overflow: hidden
   width: 100%
+
+.popup-form
+  display: block
+  max-width: 440px
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  background-color: #fff
+  border-radius: 10px
+  padding: 30px
+  text-align: center
+  .form-labels-wrap
+    flex-direction: column
+    padding: 0 30px
+  .form-desc
+    margin-bottom: 20px
+  label
+    width: 100%
+    margin-bottom: 15px
+  .btn
+    width: 100%
+
+.popup-greeting
+  h2
+    margin-bottom: 20px
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+//preloader
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 10000
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #eef7ff
+
+.sk-folding-cube
+  width: 4em
+  height: 4em
+  position: relative
+  margin: auto
+  transform: rotateZ(45deg)
+
+
+.sk-folding-cube .sk-cube
+  float: left
+  width: 50%
+  height: 50%
+  position: relative
+  transform: scale(1.1)
+
+.sk-folding-cube .sk-cube:before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: $accent-green
+  animation: sk-folding-cube-angle 2.4s infinite linear both
+  transform-origin: 100% 100%
+
+.sk-folding-cube .sk-cube-2
+  transform: scale(1.1) rotateZ(90deg)
+
+.sk-folding-cube .sk-cube-3
+  transform: scale(1.1) rotateZ(180deg)
+
+.sk-folding-cube .sk-cube-4
+  transform: scale(1.1) rotateZ(270deg)
+
+.sk-folding-cube .sk-cube-2:before
+  animation-delay: 0.3s
+
+.sk-folding-cube .sk-cube-3:before
+  animation-delay: 0.6s
+
+.sk-folding-cube .sk-cube-4:before
+  animation-delay: 0.9s
+
+
+@-webkit-keyframes sk-folding-cube-angle
+  0%, 10%
+    transform: perspective(140px) rotateX(-180deg)
+    opacity: 0
+
+  25%, 75%
+    transform: perspective(140px) rotateX(0deg)
+    opacity: 1
+
+  90%, 100%
+    transform: perspective(140px) rotateY(180deg)
+    opacity: 0
+
+@keyframes sk-folding-cube-angle
+  0%, 10%
+    transform: perspective(140px) rotateX(-180deg)
+    opacity: 0
+
+  25%, 75%
+    transform: perspective(140px) rotateX(0deg)
+    opacity: 1
+
+  90%, 100%
+    transform: perspective(140px) rotateY(180deg)
+    opacity: 0
+
 
 
 

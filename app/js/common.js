@@ -99,6 +99,28 @@ $(document).ready(function(){
         }
     });
 
+
+
+    var $reviewsSlider = $('.reviews-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        dots: true,
+        autoplay: false,
+        navText: ["", ""],
+        autoWidth: true,
+        startPosition: 1,
+        center: true,
+        nav: true,
+        responsive: {
+            0: {
+                margin: 15
+            },
+            768: {
+                margin: 30
+            }
+        }
+    });
+
     $('.intro-slider').owlCarousel({
         loop:true,
         nav: false,
@@ -112,21 +134,22 @@ $(document).ready(function(){
         // autoplay: true,
     });
 
-
-
-
     $('.adv-item:first-child').addClass('active').find('.adv-item-content').show();
 
-    $('.adv-item-btn').click(function(){
-        var th = $(this);
-        var parent = th.parents('.adv-item');
-        var content = th.siblings('.adv-item-content');
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
 
-        parent.toggleClass('active');
-        content.slideToggle();
-
-        parent.siblings('.adv-item').removeClass('active').find('.adv-item-content').slideUp();
-    })
 
     function heightses() {
         if ($(window).width()>480) {
@@ -140,6 +163,21 @@ $(document).ready(function(){
     });
 
     heightses();
+
+
+
+    $('.preloader').fadeOut();
+
+    $('.adv-item-btn').click(function(){
+        var th = $(this);
+        var parent = th.parents('.adv-item');
+        var content = th.siblings('.adv-item-content');
+
+        parent.toggleClass('active');
+        content.slideToggle();
+
+        parent.siblings('.adv-item').removeClass('active').find('.adv-item-content').slideUp();
+    })
 
 
     /** FORMS START*/
@@ -172,6 +210,31 @@ $(document).ready(function(){
             data: th.serialize()
         }).done(function() {
 
+            $.magnificPopup.open({
+                items: {
+                    src: '#popup-greeting'
+                },
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-request'
+            }, 0);
+
+
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled");
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 3000);
         });
         return false;
     });

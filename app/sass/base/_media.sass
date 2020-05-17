@@ -82,6 +82,32 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .copyright
+    &-line
+      flex-wrap: wrap
+    &-text
+      position: relative
+      width: 100%
+      text-align: center
+      margin-bottom: 10px
+
+  .reviews-slider
+    .owl-nav
+      button.owl-prev
+        left: calc(50% - 325px)
+      button.owl-next
+        right: calc(50% - 325px)
+
+  .review-item
+    width: 600px
+    &-img
+      width: 250px
+    &-content
+      width: calc(100% - 250px)
+      padding: 25px 20px
+    &-desc
+      font-size: 14px
+
   .s-about
     padding-top: 100px
 
@@ -161,6 +187,23 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .reviews-slider
+    .owl-nav
+      button.owl-prev
+        left: calc(50% - 225px)
+      button.owl-next
+        right: calc(50% - 225px)
+
+  .review-item
+    width: 400px
+    flex-direction: column
+    &-img
+      width: 100%
+      height: 200px
+    &-content
+      width: 100%
+      padding: 25px
 
   .video-item
     height: 380px
@@ -242,7 +285,32 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
-  .owl-carousel
+  .popup-form
+    padding: 30px 20px
+    .form-labels-wrap
+      padding: 0 20px
+
+  .main-foot
+    .top-line
+      padding: 20px 0
+
+  .copyright
+    padding: 20px 0
+
+  .reviews-slider
+    .owl-nav
+      button.owl-prev
+        left: calc(50% - 165px)
+      button.owl-next
+        right: calc(50% - 165px)
+
+  .review-item
+    width: 300px
+
+  .s-reviews
+    padding-bottom: 120px
+
+  .stocks-slider
     .owl-nav
       button.owl-prev
         left: -15px
@@ -251,6 +319,8 @@
 
   .s-stocks
     padding-top: 40px
+    .section-title
+      margin-bottom: 30px
 
   .stock-item
     &-title
@@ -270,13 +340,25 @@
   .video-item
     height: 320px
 
+  .s-video
+    padding-top: 90px
+    .section-title
+      margin-bottom: 30px
+
   .about-content
     font-size: 14px
     width: calc(100% - 60px)
     padding: 30px 20px
+    li
+      &:before
+        top: 7px
+
+  .s-choose
+    padding-top: 130px
 
   .s-about
     padding-top: 50px
+    padding-bottom: 20px
 
   .section-desc
     font-size: 16px
@@ -315,13 +397,17 @@
 
 
   .project-form
-    padding-left: 60px
+    padding: 30px 20px
     text-align: center
     .section-title
       text-align: center
     .btn
       margin-left: auto
       margin-right: auto
+    label
+      width: 100%
+    .form-labels-wrap
+      padding: 0 20px
 
   .project-item
     &-img
@@ -332,6 +418,7 @@
 
   .section-form
     padding: 30px 20px
+    box-shadow: 0 0 0 15px rgba(255,255,255,.6), 0 0 15px 15px rgba(0,0,0,.2)
     .form-labels-wrap
       padding: 0 20px
 
@@ -399,6 +486,34 @@
 
 @media (max-width: 390px)
 
+  .popup-form
+    .form-desc
+      font-size: 14px
+
+  .copyright
+    font-size: 14px
+
+  .reviews-slider
+    .owl-nav
+      button.owl-prev
+        left: 0
+      button.owl-next
+        right: 0
+
+  .review-item
+    width: 250px
+    &-img
+      height: 160px
+    &-content
+      padding: 15px
+    &-photo
+      width: 40px
+      height: 40px
+      margin-right: 10px
+    &-topcontent
+      width: calc(100% - 50px)
+    &-name
+      font-size: 16px
 
   .video-item
     height: 280px
