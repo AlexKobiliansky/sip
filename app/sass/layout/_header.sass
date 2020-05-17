@@ -122,6 +122,9 @@
     font-size: 14px
     line-height: 1
 
-.mm-menu
-  z-index: 10
+.mm-menu_position-bottom.mm-menu_opened, .mm-menu_position-front.mm-menu_opened, .mm-menu_position-top.mm-menu_opened
+  z-index: 999
+
+.mm-wrapper_opened, .mm-wrapper_opening [class*=mm-menu_pagedim].mm-menu_opened~.mm-page__blocker
+  z-index: 990
 
