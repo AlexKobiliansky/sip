@@ -1,0 +1,53 @@
+.s-contacts
+  background-color: #eef7ff
+  padding-bottom: 80px
+  box-shadow: 0 20px 20px 0 #eef7ff
+  position: relative
+  z-index: 2
+  .section-title
+    text-align: left
+    margin-bottom: 25px
+    line-height: 1
+  .breadcrumbs
+    margin-bottom: 10px
+
+.clouds-contacts-bottom
+  left: 0
+  bottom: -100px
+
+.contact-item
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+  font-size: 18px
+  font-weight: 300
+  line-height: 1
+  &-img
+    width: 27px
+    margin-right: 18px
+    position: relative
+    top: 2px
+  &-desc
+    width: calc(100% - 35px)
+  .svg
+    width: 100%
+    height: auto
+    fill: $accent-red
+  &.phone
+    font-weight: normal
+    a
+      color: $accent-green
+      &:hover
+        color: $accent-green
+        text-decoration: underline
+  &.mail
+    font-weight: 500
+    a
+      color: $text
+      &:hover
+        color: $accent-red
+
+#map
+  background-color: #e9ffe0
+  height: 580px
