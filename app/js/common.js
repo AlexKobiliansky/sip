@@ -129,6 +129,28 @@ $(document).ready(function(){
         }
     });
 
+    $('.gallery-slider').owlCarousel({
+        loop:false,
+        nav: true,
+        items: 3,
+        margin: 15,
+        dots: true,
+        autoplay: false,
+        navText: ['', ''],
+        dotsEach: 1,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            1200: {
+                items: 3,
+            }
+        }
+    });
+
 
 
     var $reviewsSlider = $('.reviews-slider').owlCarousel({
@@ -171,6 +193,11 @@ $(document).ready(function(){
             $('.catalog-slider .project-item-title').height('auto').equalHeights();
             $('.catalog-slider .project-item-desc').height('auto').equalHeights();
         }
+
+        if ($(window).width()>480) {
+            $('.gal-item-title').height('auto').equalHeights();
+            $('.gal-item-desc').height('auto').equalHeights();
+        }
     }
 
     $(window).resize(function() {
@@ -201,6 +228,38 @@ $(document).ready(function(){
 
 
     $('.preloader').fadeOut();
+
+    $('.gallery-slider').magnificPopup({
+        mainClass: 'mfp-zoom-in',
+        delegate: 'a',
+        type: 'image',
+        tLoading: '',
+        gallery:{
+            enabled:true,
+        },
+        removalDelay: 300,
+        callbacks: {
+            beforeChange: function() {
+                this.items[0].src = this.items[0].src + '?=' + Math.random();
+            },
+            open: function() {
+                $.magnificPopup.instance.next = function() {
+                    var self = this;
+                    self.wrap.removeClass('mfp-image-loaded');
+                    setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
+                }
+                $.magnificPopup.instance.prev = function() {
+                    var self = this;
+                    self.wrap.removeClass('mfp-image-loaded');
+                    setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
+                }
+            },
+            imageLoadComplete: function() {
+                var self = this;
+                setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
+            }
+        }
+    });
 
     $('.adv-item-btn').click(function(){
         var th = $(this);

@@ -1,0 +1,133 @@
+.s-gallery
+  background-color: #eef7ff
+  margin-bottom: 0
+  box-shadow: 0 20px 20px 0 #fff
+  .container
+    position: relative
+    z-index: 2
+  .cloud-gradient-bottom
+    bottom: -90px
+
+.gal-item
+  margin-bottom: 20px
+  display: block
+  &-img
+    position: relative
+    display: block
+    height: 312px
+    margin-bottom: 15px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: rgba($accent-red, .7)
+      +mt(.5s)
+      opacity: 0
+    &:after
+      content: ''
+      position: absolute
+      width: 70px
+      height: 70px
+      background-image: url('../img/icons/gal-icon.png')
+      +bg-cover
+      left: calc(50% - 35px)
+      top: calc(50% - 35px)
+      opacity: 0
+      +mt(.5s)
+  &-title
+    display: block
+    line-height: 1.2
+    font-size: 20px
+    font-weight: 500
+    color: $text
+    margin-bottom: 10px
+    pointer-events: none
+  &-address
+    display: block
+    line-height: 1
+    color: $accent-green
+  &:hover
+    .gal-item
+      &-img
+        &:after, &:before
+          opacity: 1
+
+.gallery-slider
+  .owl-dots
+    text-align: center
+    margin-top: 35px
+    button.owl-dot
+      margin: 0 4px
+  .owl-nav
+    top: auto
+    bottom: 30px
+    button.owl-prev, button.owl-next
+      border: none
+      width: 40px
+      height: 40px
+    button.owl-prev
+      left: 0
+    button.owl-next
+      right: 0
+
+
+.mfp-ready .mfp-figure
+  opacity: 0
+.mfp-zoom-in
+  .mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+    opacity: 0
+    transition: all 0.3s ease-out
+    transform: scale(0.95)
+  &.mfp-bg, .mfp-preloader
+    opacity: 0
+    transition: all 0.3s ease-out
+  &.mfp-image-loaded .mfp-figure
+    opacity: 1
+    transform: scale(1)
+  &.mfp-ready
+    .mfp-iframe-holder .mfp-iframe-scaler
+      opacity: 1
+      transform: scale(1)
+    &.mfp-bg, .mfp-preloader
+      opacity: 0.8
+  &.mfp-removing
+    .mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+      transform: scale(0.95)
+      opacity: 0
+    &.mfp-bg, .mfp-preloader
+      opacity: 0
+
+.mfp-iframe-scaler
+  overflow: visible
+.mfp-zoom-out-cur
+  cursor: auto
+  .mfp-image-holder .mfp-close
+    cursor: pointer
+.mfp-preloader
+  width: 30px
+  height: 30px
+  background-color: #FFF
+  opacity: 0.65
+  margin: 0 auto
+  animation: rotateplane 1.2s infinite ease-in-out
+@-webkit-keyframes rotateplane
+  0%
+    -webkit-transform: perspective(120px)
+  50%
+    -webkit-transform: perspective(120px) rotateY(180deg)
+  100%
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+@keyframes rotateplane
+  0%
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  50%
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  100%
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
