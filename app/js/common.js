@@ -129,6 +129,34 @@ $(document).ready(function(){
         }
     });
 
+    $('.similars-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 4,
+        dots: false,
+        autoplay: false,
+        navText: ['', ''],
+        dotsEach: 1,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 15
+            },
+            480: {
+                items: 2,
+                margin: 15
+            },
+            992: {
+                items: 3,
+                margin: 30
+            },
+            1200: {
+                items: 4,
+                margin: 30
+            }
+        }
+    });
+
     $('.gallery-slider').owlCarousel({
         loop:false,
         nav: true,
@@ -173,6 +201,25 @@ $(document).ready(function(){
         }
     });
 
+    $('.project-slider').owlCarousel({
+        loop:false,
+        nav:false,
+        autoHeight: true,
+        items: 1,
+        thumbs: true,
+        dots: false,
+        thumbsPrerendered: true,
+        thumbItemClass: 'product-nav',
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        mouseDrag: false,
+    });
+
+    $('.project-slider').photoswipe({
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+    });
+
     $('.intro-slider').owlCarousel({
         loop:true,
         nav: false,
@@ -192,6 +239,8 @@ $(document).ready(function(){
             $('.projects-wrap .project-item-desc').matchHeight({byRow: true});
             $('.catalog-slider .project-item-title').height('auto').equalHeights();
             $('.catalog-slider .project-item-desc').height('auto').equalHeights();
+            $('.similars-slider .project-item-title').height('auto').equalHeights();
+            $('.similars-slider .project-item-desc').height('auto').equalHeights();
         }
 
         if ($(window).width()>480) {
@@ -206,10 +255,12 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.projects-tabs-wrap').tabs();
+
     $('.adv-item:first-child').addClass('active').find('.adv-item-content').show();
 
     $(function() {
-        $("a[href='#popup-form']").magnificPopup({
+        $("a[href='#popup-form'], a[href='#project-popup']").magnificPopup({
             type: "inline",
             fixedContentPos: !1,
             fixedBgPos: !0,
@@ -221,6 +272,13 @@ $(document).ready(function(){
             mainClass: "my-mfp-zoom-in"
         })
     });
+
+    $("a[href='#project-popup']").on('click', function(){
+        var projectName = $(this).data('name');
+
+        $('#popup-project-name').attr('value', projectName);
+        $('#popup-project-title').text(projectName);
+    })
 
 
 

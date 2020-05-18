@@ -6,6 +6,22 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .project-chars-wrap
+    padding-right: 0
+
+  .project-top
+    &-left
+      width: 560px
+      margin-right: 20px
+    &-right
+      width: calc(100% - 580px)
+
+  .project-slide
+    height: 390px
+
+  .project-nav
+    height: 120px
+
   .section-form.p-contacts-form .form-labels-wrap
     padding: 0
 
@@ -87,6 +103,28 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .project-controls
+    li
+      font-size: 16px
+      a
+        padding: 14px 24px
+
+  .project-mobile-slider
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 20px
+
+  .project-top
+    &-left
+      display: none
+    &-right
+      width: 100%
+      padding-top: 0
+
+  .project-title
+    margin-bottom: 25px
 
   .s-contacts
     padding-bottom: 40px
@@ -208,6 +246,51 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .similars-slider
+    .owl-nav
+      top: 200px
+      button.owl-prev, button.owl-next
+        width: 40px
+        height: 40px
+        border-width: 3px
+        background-size: 15px 15px
+
+  .owl-carousel
+    .owl-nav
+      button.owl-prev, button.owl-next
+
+      button.owl-prev
+        left: -15px
+      button.owl-next
+        right: -15px
+
+  .project-char
+    width: 100%
+    &:nth-last-child(2)
+      border-bottom: 1px solid #e8e8e8
+
+  .project-controls
+    display: flex
+    flex-wrap: wrap
+    li
+      width: 50%
+      border: 1px solid #e8e8e8
+      &.ui-state-active
+        border-color: #e8e8e8
+        border-top-color: $accent-red
+
+      &:nth-child(1), &:nth-child(2)
+        border-bottom: none
+      &:nth-child(even)
+        border-left: none
+        &:after
+          width: calc(100% + 1px)
+          left: 0
+      a
+        display: block
+        text-align: center
+
+
   .reviews-slider
     .owl-nav
       button.owl-prev
@@ -304,6 +387,50 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .similars
+    .section-title
+      margin-bottom: 25px
+
+  .project-controls
+    li
+      font-size: 12px
+      a
+        padding: 14px
+
+  .project-tab
+    padding: 15px
+
+  .project-char
+    font-size: 14px
+    padding: 8px 0
+    &-title
+      width: 70%
+    &-value
+      width: 30%
+
+  .project
+    &-name
+      font-size: 28px
+    &-mobile-slider
+      flex-direction: column-reverse
+    &-slider
+      width: 100%
+      margin-bottom: 10px
+    &-slide
+      height: 300px
+    &-slider-nav
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-nav
+      height: 100px
+      width: calc(33.33333% - 7px)
+      margin-bottom: 0
+    &-desc
+      font-size: 14px
+
 
   .gal-item
     &-img
@@ -533,6 +660,27 @@
       margin-top: 15px
 
 @media (max-width: 390px)
+
+  .similars-slider
+    .owl-nav
+      top: 180px
+
+  .s-project
+    .breadcrumbs
+      margin-bottom: 0
+
+  .project
+    &-title
+      font-size: 24px
+      margin-bottom: 20px
+    &-slide
+      height: 240px
+    &-nav
+      height: 80px
+    &-price
+      font-size: 18px
+      margin-bottom: 20px
+
 
   .popup-form
     .form-desc

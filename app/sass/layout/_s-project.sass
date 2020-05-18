@@ -1,0 +1,145 @@
+.s-project
+  background-color: #eef7ff
+  position: relative
+  .breadcrumbs
+    margin-bottom: 20px
+  .container
+    position: relative
+    z-index: 2
+
+.project-top
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 45px
+  &-left
+    width: 680px
+    margin-right: 35px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &-right
+    width: calc(100% - 715px)
+    padding-top: 35px
+
+.project-slider-nav
+  width: 150px
+  margin-right: 15px
+
+.project-nav
+  height: 140px
+  border-radius: 5px
+  overflow: hidden
+  margin-bottom: 15px
+  box-shadow: 0 0 10px 5px rgba(#000, .07)
+  +bg-cover
+  cursor: pointer
+  &:last-child
+    margin-bottom: 0
+
+.project-slider
+  width: calc(100% - 165px)
+  border-radius: 5px
+  overflow: hidden
+  box-shadow: 0 0 20px 15px rgba(#000, .07)
+
+.project-slide
+  height: 450px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.project-title
+  font-family: "Oswald", sans-serif
+  font-size: 32px
+  line-height: 1.2
+  margin-bottom: 15px
+
+.project-desc
+  color: #767676
+  margin-bottom: 20px
+  p
+    margin-bottom: 5px
+
+.project-price
+  font-size: 22px
+  font-weight: 700
+  line-height: 1
+  margin-bottom: 30px
+
+.project-mobile-slider
+  display: none
+
+.project-controls
+  font-size: 0
+  position: relative
+  z-index: 2
+  li
+    display: inline-block
+    line-height: 1
+    font-size: 18px
+    font-weight: 500
+
+    background-color: #f8f8f8
+    border: 1px solid #e8e8e8
+    box-sizing: border-box
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: calc(100% + 2px)
+      height: 1px
+      background-color: $accent-red
+      top: 0
+      left: -1px
+      opacity: 0
+    a
+      display: inline-block
+      color: $text
+      padding: 18px 32px
+    &.ui-state-active
+      border-color: transparent
+      border-top-color: $accent-red
+      background-color: #fff
+      &:after
+        opacity: 1
+
+.project-tab
+  background-color: #fff
+  padding: 32px
+  box-shadow: 0 0 25px 5px rgba(#000, .05)
+
+.project-chars-wrap
+  padding-right: 165px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.project-char
+  width: calc(50% - 25px)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 12px 0
+  border-bottom: 1px solid #e8e8e8
+  &:nth-last-child(1), &:nth-last-child(2)
+    border-bottom: none
+  &-title
+    width: 60%
+    padding-right: 5px
+    color: #616161
+    font-weight: 300
+  &-value
+    width: 40%
+    padding-left: 5px
+    text-align: right
+    font-weight: 500
+
+.projects-tabs-wrap
+  margin-bottom: 55px
+
+.similars
+  .section-title
+    text-align: center
+    margin-bottom: 35px

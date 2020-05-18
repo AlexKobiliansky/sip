@@ -48,6 +48,10 @@ gulp.task('scripts', function() {
 		'app/libs/equalHeights/jquery.equalheights.min.js',
 		'app/libs/matchHeight/jquery.matchHeight-min.js',
 		'app/libs/magnificPopup/jquery.magnific-popup.min.js',
+		'app/libs/photoswipe/photoswipe.min.js',
+		'app/libs/photoswipe/photoswipe-ui-default.min.js',
+		'app/libs/photoswipe/jquery.photoswipe.js',
+		'app/libs/jqueryTabs/jquery-ui.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
